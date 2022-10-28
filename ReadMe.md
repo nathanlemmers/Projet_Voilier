@@ -65,9 +65,9 @@ void changerCap(GPIO commande)
 	Utiliser PWM pour régler l'intensité des moteurs
 }
 
-*******************
-* Accéléromètre : *
-*******************
+*********************
+** Accéléromètre : **
+*********************
 
 boolean surRoulis(GPIO accéléromètre)
 {
@@ -79,6 +79,6 @@ void lacherVoile(boolean surRoulis) {
 	if surRoulis() relache la voile ;
 }
 
-*******************
-** Télécommande : *
-*******************
+********************
+** Télécommande : **
+********************
