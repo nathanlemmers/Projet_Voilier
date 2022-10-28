@@ -103,7 +103,6 @@ void TIM4_IRQHandler (void)
 
 void MyTimer_PWM( TIM_TypeDef * Timer , char Channel ){
 	
-	if (Timer != TIM1) {
 		if (Channel == 1) {
 			
 			//Timer->CCMR1 |= TIM_CCMR1_OC1M; // 0x70
@@ -132,7 +131,9 @@ void MyTimer_PWM( TIM_TypeDef * Timer , char Channel ){
 		Timer->EGR |= TIM_EGR_UG;
 		Timer->CCER |= TIM_CCER_CC1E ;
 	
-	}
+		if (Timer == TIM1) {
+			Timer->BDTR |= TIM_BDTR_MOE;
+		}
 }
 
 void MyTimer_PWM_Cycle ( TIM_TypeDef * Timer , char Channel , float ratio )
