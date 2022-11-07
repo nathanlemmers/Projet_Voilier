@@ -153,7 +153,7 @@ void MyTimer_PWM_Cycle ( TIM_TypeDef * Timer , char Channel , float ratio )
 void MyTimer_PWM_ToGPIO(TIM_TypeDef * Timer , char Channel) {
 
 	MyGPIO_Struct_TypeDef PWM;
-	PWM.GPIO_Conf= AltOut_Ppull	 ;
+	PWM.GPIO_Conf = AltOut_Ppull	 ;
 	
 	if (Timer == TIM1) {
 		if (Channel == 1) {
