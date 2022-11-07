@@ -21,15 +21,19 @@ void configureIncrementalEncoder()
 	MyTimer_Base_Init(&Timer4Config);
 	
 	
-	// TODO : mettre les bonnes valeurs (page 392)
-	TIM4->CCMR1 &= ~TIM_CCMR1_CC1S;
-	TIM4->CCMR1 &= ~TIM_CCMR1_CC2S;
+	TIM4->CCMR1 &= ~TIM_CCMR1_CC1S ;
+	TIM4->CCMR1 |= TIM_CCMR1_CC1S_0 ;
+	TIM4->CCMR1 &= ~TIM_CCMR1_CC2S ;
+	TIM4->CCMR1 |= TIM_CCMR1_CC2S_0 ;
 	TIM4->CCER &= ~TIM_CCER_CC1P ;
 	TIM4->CCER &= ~TIM_CCER_CC1NP ;
 	TIM4->CCMR1 &= ~TIM_CCMR1_IC1F ;
 	TIM4->CCER &= ~TIM_CCER_CC2P ;
 	TIM4->CCER &= ~TIM_CCER_CC2NP ;
 	TIM4->CCMR1 &= ~TIM_CCMR1_IC2F ;
+	TIM4->SMCR &= ~TIM_SMCR_SMS ;
+	TIM4->SMCR |= TIM_SMCR_SMS_0 | TIM_SMCR_SMS_1 ;
+	TIM4->CR1 |= TIM_CR1_CEN ;
 }
 
 int main (void)
