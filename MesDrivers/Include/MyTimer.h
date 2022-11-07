@@ -41,4 +41,6 @@ void MyTimer_ActiveIT ( TIM_TypeDef * Timer , char Prio , void (*IT_function) (v
 void MyTimer_PWM( TIM_TypeDef * Timer , char Channel ) ;
 void MyTimer_PWM_Cycle ( TIM_TypeDef * Timer , char Channel , float ratio )  ;
 void MyTimer_PWM_ToGPIO(TIM_TypeDef * Timer , char Channel) ;
+void MyTimer_ConfigureIncrementalEncoder(void) ;
+
 #endif
