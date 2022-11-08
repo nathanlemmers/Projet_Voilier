@@ -5,7 +5,7 @@ https://docs.google.com/spreadsheets/d/1FeegPGEJXE2erZf9Mmz8QHtwiJrAz9IVcwBRSWiz
 
 ### Fonctions :
 *******************
-*** Girouette : ***
+Girouette :
 *******************
 
 
@@ -14,7 +14,7 @@ int codeurIncremental()
 }
 
 *******************
-***** Voiles : ****
+Voiles :
 *******************
 TIMER 2 PWM : CHANNEL 1 : A0 :
 
@@ -28,7 +28,7 @@ void ajusterVoile(int angle)
 }
 
 *******************
-**** Plateau : ****
+Plateau :
 *******************
 TIMER 3 : CHANNEL 3 : PIN BO 
 void changerCap(GPIO commande)
@@ -39,7 +39,7 @@ void changerCap(GPIO commande)
 }
 
 *********************
-** Accéléromètre : **
+Accéléromètre :
 *********************
 
 boolean surRoulis(GPIO accéléromètre)
@@ -53,5 +53,5 @@ void lacherVoile(boolean surRoulis) {
 }
 
 ********************
-** Télécommande : **
+Télécommande :
 ********************
