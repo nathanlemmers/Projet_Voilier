@@ -108,29 +108,32 @@ void MyTimer_PWM( TIM_TypeDef * Timer , char Channel ){
 			//Timer->CCMR1 |= TIM_CCMR1_OC1M; // 0x70
 			Timer->CCMR1 |= 0x60;
 			Timer->CCMR1 |= TIM_CCMR1_OC1PE;
+			Timer->CCER |= TIM_CCER_CC1E ;
 			
 		} else if (Channel == 2) {
 			
 			//Timer->CCMR1 |= TIM_CCMR1_OC2M; // 0x7000
 			Timer->CCMR1 |= 0x6000;
 			Timer->CCMR1 |= TIM_CCMR1_OC2PE;
+			Timer->CCER |= TIM_CCER_CC2E ;
 			
 		} else if (Channel == 3) {
 			
 			//Timer->CCMR2 |= TIM_CCMR2_OC3M; // 0x70
 			Timer->CCMR2 |= 0x60;
 			Timer->CCMR2 |= TIM_CCMR2_OC3PE;
+			Timer->CCER |= TIM_CCER_CC3E ;
 			
 		} else if (Channel == 4) {
 			
 			//Timer->CCMR2 |= TIM_CCMR2_OC4M; // 0x7000
 			Timer->CCMR2 |= 0x6000;
 			Timer->CCMR2 |= TIM_CCMR2_OC4PE;
+			Timer->CCER |= TIM_CCER_CC4E ;
 			
 		}
     
 		Timer->EGR |= TIM_EGR_UG;
-		Timer->CCER |= TIM_CCER_CC1E ;
 		if ( Timer == TIM1){
 			Timer->BDTR |= TIM_BDTR_MOE ; // moe
 		}
