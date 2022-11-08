@@ -388,6 +388,11 @@
               <FileType>1</FileType>
               <FilePath>.\Sources\main.c</FilePath>
             </File>
+            <File>
+              <FileName>Plateau.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MesDrivers\Source\Plateau.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -802,6 +807,11 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Sources\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>Plateau.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MesDrivers\Source\Plateau.c</FilePath>
             </File>
           </Files>
         </Group>
