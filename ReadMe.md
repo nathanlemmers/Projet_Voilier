@@ -9,35 +9,8 @@ https://docs.google.com/spreadsheets/d/1FeegPGEJXE2erZf9Mmz8QHtwiJrAz9IVcwBRSWiz
 *******************
 
 
-int compteurGirouette(GPIOA.8 et GPIOA.7)
+int codeurIncremental()
 {
-    Si le disque tourne vers la droite, +1
-    Si le disque tourne vers la gauche, -1
-    O sinon
-    Déterminer la direction en utilisant le déphasage
-
-    Si A_précédent fermé && B_précédent fermé
-        Si A ouvert : +1
-        Si B ouvert : -1
-    Si A_précédent ouvert && B_précédent fermé :
-        Si B ouvert : +1
-        Si A fermé : -1
-    Si A_précédent ouvert && B_précédent ouvert :
-        Si A fermé : +1
-        Si B fermé : -1
-    Si A_précédent fermé && B_précédent ouvert :
-        Si B fermé : +1
-        Si A ouvert : -1
-	
-	On retient l'état (A, B) précédent et on compare à chaque appel
-}
-
-
-
-
-int orientationVent()
-{
-    1/4° * compteurGirouette();
 }
 
 *******************

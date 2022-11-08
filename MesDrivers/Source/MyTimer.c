@@ -108,29 +108,32 @@ void MyTimer_PWM( TIM_TypeDef * Timer , char Channel ){
 			//Timer->CCMR1 |= TIM_CCMR1_OC1M; // 0x70
 			Timer->CCMR1 |= 0x60;
 			Timer->CCMR1 |= TIM_CCMR1_OC1PE;
+			Timer->CCER |= TIM_CCER_CC1E ;
 			
 		} else if (Channel == 2) {
 			
 			//Timer->CCMR1 |= TIM_CCMR1_OC2M; // 0x7000
 			Timer->CCMR1 |= 0x6000;
 			Timer->CCMR1 |= TIM_CCMR1_OC2PE;
+			Timer->CCER |= TIM_CCER_CC2E ;
 			
 		} else if (Channel == 3) {
 			
 			//Timer->CCMR2 |= TIM_CCMR2_OC3M; // 0x70
 			Timer->CCMR2 |= 0x60;
 			Timer->CCMR2 |= TIM_CCMR2_OC3PE;
+			Timer->CCER |= TIM_CCER_CC3E ;
 			
 		} else if (Channel == 4) {
 			
 			//Timer->CCMR2 |= TIM_CCMR2_OC4M; // 0x7000
 			Timer->CCMR2 |= 0x6000;
 			Timer->CCMR2 |= TIM_CCMR2_OC4PE;
+			Timer->CCER |= TIM_CCER_CC4E ;
 			
 		}
     
 		Timer->EGR |= TIM_EGR_UG;
-		Timer->CCER |= TIM_CCER_CC1E ;
 		if ( Timer == TIM1){
 			Timer->BDTR |= TIM_BDTR_MOE ; // moe
 		}
@@ -234,4 +237,42 @@ void MyTimer_PWM_ToGPIO(TIM_TypeDef * Timer , char Channel) {
 		}
 	}
 	MyGPIO_Init(&PWM) ;
+}
+
+void MyTimer_ConfigureIncrementalEncoder(void)
+{
+	MyGPIO_Struct_TypeDef TI1, TI2 ;
+	MyTimer_Struct_TypeDef Timer4Config = { TIM4 , 360*4 - 1 , 0 } ;
+	
+	TI1.GPIO = GPIOB ;
+	TI1.GPIO_Conf = In_Floating ;
+	TI1.GPIO_Pin = 6 ;
+	MyGPIO_Init (&TI1) ;
+	
+	TI2.GPIO = GPIOB ;
+	TI2.GPIO_Conf = In_Floating ;
+	TI2.GPIO_Pin = 7 ;
+	MyGPIO_Init (&TI2) ;
+	 
+	MyTimer_Base_Init(&Timer4Config);
+	
+	
+	TIM4->CCMR1 &= ~TIM_CCMR1_CC1S ;
+	TIM4->CCMR1 |= TIM_CCMR1_CC1S_0 ;
+	
+	TIM4->CCMR1 &= ~TIM_CCMR1_CC2S ;
+	TIM4->CCMR1 |= TIM_CCMR1_CC2S_0 ;
+	
+	TIM4->CCER &= ~TIM_CCER_CC1P ;
+	TIM4->CCER &= ~TIM_CCER_CC1NP ;
+	TIM4->CCMR1 &= ~TIM_CCMR1_IC1F ;
+	
+	TIM4->CCER &= ~TIM_CCER_CC2P ;
+	TIM4->CCER &= ~TIM_CCER_CC2NP ;
+	
+	TIM4->CCMR1 &= ~TIM_CCMR1_IC2F ;
+	
+	TIM4->SMCR &= ~TIM_SMCR_SMS ;
+	TIM4->SMCR |= TIM_SMCR_SMS_0 | TIM_SMCR_SMS_1 ;
+	TIM4->CR1 |= TIM_CR1_CEN ;
 }

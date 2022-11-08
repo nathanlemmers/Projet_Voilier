@@ -403,6 +403,21 @@
               <FileType>1</FileType>
               <FilePath>..\MesDrivers\Source\MyTimer.c</FilePath>
             </File>
+            <File>
+              <FileName>Girouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MesDrivers\Source\Girouette.c</FilePath>
+            </File>
+            <File>
+              <FileName>Ecoute.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MesDrivers\Source\Ecoute.c</FilePath>
+            </File>
+            <File>
+              <FileName>Voiles.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MesDrivers\Source\Voiles.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -812,6 +827,21 @@
               <FileName>MyTimer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MesDrivers\Source\MyTimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>Girouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MesDrivers\Source\Girouette.c</FilePath>
+            </File>
+            <File>
+              <FileName>Ecoute.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MesDrivers\Source\Ecoute.c</FilePath>
+            </File>
+            <File>
+              <FileName>Voiles.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MesDrivers\Source\Voiles.c</FilePath>
             </File>
           </Files>
         </Group>
