@@ -404,6 +404,11 @@
               <FilePath>..\MesDrivers\Source\MyTimer.c</FilePath>
             </File>
             <File>
+              <FileName>UART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MesDrivers\Source\UART.c</FilePath>
+            </File>
+            <File>
               <FileName>Girouette.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MesDrivers\Source\Girouette.c</FilePath>
@@ -829,6 +834,11 @@
               <FilePath>..\MesDrivers\Source\MyTimer.c</FilePath>
             </File>
             <File>
+              <FileName>UART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MesDrivers\Source\UART.c</FilePath>
+            </File>
+            <File>
               <FileName>Girouette.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MesDrivers\Source\Girouette.c</FilePath>
@@ -902,18 +912,4 @@
         <targetInfos>
           <targetInfo name="Réel"/>
           <targetInfo name="Simulé"/>
-        </targetInfos>
-      </file>
-    </files>
-  </RTE>
-
-  <LayerInfo>
-    <Layers>
-      <Layer>
-        <LayName>LED</LayName>
-        <LayPrjMark>1</LayPrjMark>
-      </Layer>
-    </Layers>
-  </LayerInfo>
-
-</Project>
+        </targ>
