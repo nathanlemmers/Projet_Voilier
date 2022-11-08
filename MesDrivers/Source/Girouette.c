@@ -6,7 +6,7 @@ void Girouette_Init()
 }
 
 float Girouette_GetAngle()
-	{
+{
 	float angle = TIM4->CNT ;
 	angle = angle / 4. ;
 	if (angle>180.)

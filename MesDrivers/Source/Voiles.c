@@ -9,5 +9,5 @@ void Voiles_Init()
 void Voiles_Update()
 {
 	// min servo pour girouette a 45° et max a 77°32
-	Ecoute_BorderEcoute(45 + (32./180.) * Girouette_GetAngle());
+	Ecoute_BorderEcoute(45. + (32./180.) * Girouette_GetAngle());
 }
