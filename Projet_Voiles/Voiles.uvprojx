@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>LED_simul</OutputName>
+          <OutputName>Voilier_simul</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include;..\MesDrivers\Include;..\MesDrivers\Source</IncludePath>
+              <IncludePath>.\Include;..\MesDrivers\Include;..\MesDrivers\Source;..\Services\Include;..\Services\Source</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -404,24 +404,81 @@
               <FilePath>..\MesDrivers\Source\MyTimer.c</FilePath>
             </File>
             <File>
-              <FileName>Girouette.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\Girouette.c</FilePath>
-            </File>
-            <File>
-              <FileName>Ecoute.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\Ecoute.c</FilePath>
-            </File>
-            <File>
-              <FileName>Voiles.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\Voiles.c</FilePath>
+              <FileName>Lib_Com_Periph_2022.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\MesDrivers\Source\Lib_Com_Periph_2022.lib</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Include</GroupName>
+          <Files>
+            <File>
+              <FileName>MyGPIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\MyGPIO.h</FilePath>
+            </File>
+            <File>
+              <FileName>MyI2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\MyI2C.h</FilePath>
+            </File>
+            <File>
+              <FileName>MySPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\MySPI.h</FilePath>
+            </File>
+            <File>
+              <FileName>MyTimer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\MyTimer.h</FilePath>
+            </File>
+            <File>
+              <FileName>Accelerometre.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Services\Include\Accelerometre.h</FilePath>
+            </File>
+            <File>
+              <FileName>Ecoute.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Services\Include\Ecoute.h</FilePath>
+            </File>
+            <File>
+              <FileName>Girouette.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Services\Include\Girouette.h</FilePath>
+            </File>
+            <File>
+              <FileName>Voiles.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Services\Include\Voiles.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Services</GroupName>
+          <Files>
+            <File>
+              <FileName>Accelerometre.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Services\Source\Accelerometre.c</FilePath>
+            </File>
+            <File>
+              <FileName>Ecoute.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Services\Source\Ecoute.c</FilePath>
+            </File>
+            <File>
+              <FileName>Girouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Services\Source\Girouette.c</FilePath>
+            </File>
+            <File>
+              <FileName>Voiles.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Services\Source\Voiles.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
@@ -764,7 +821,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include;..\MesDrivers\Include</IncludePath>
+              <IncludePath>.\Include;..\MesDrivers\Include;..\Services\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -829,24 +886,81 @@
               <FilePath>..\MesDrivers\Source\MyTimer.c</FilePath>
             </File>
             <File>
-              <FileName>Girouette.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\Girouette.c</FilePath>
-            </File>
-            <File>
-              <FileName>Ecoute.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\Ecoute.c</FilePath>
-            </File>
-            <File>
-              <FileName>Voiles.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\Voiles.c</FilePath>
+              <FileName>Lib_Com_Periph_2022.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\MesDrivers\Source\Lib_Com_Periph_2022.lib</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Include</GroupName>
+          <Files>
+            <File>
+              <FileName>MyGPIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\MyGPIO.h</FilePath>
+            </File>
+            <File>
+              <FileName>MyI2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\MyI2C.h</FilePath>
+            </File>
+            <File>
+              <FileName>MySPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\MySPI.h</FilePath>
+            </File>
+            <File>
+              <FileName>MyTimer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MesDrivers\Include\MyTimer.h</FilePath>
+            </File>
+            <File>
+              <FileName>Accelerometre.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Services\Include\Accelerometre.h</FilePath>
+            </File>
+            <File>
+              <FileName>Ecoute.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Services\Include\Ecoute.h</FilePath>
+            </File>
+            <File>
+              <FileName>Girouette.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Services\Include\Girouette.h</FilePath>
+            </File>
+            <File>
+              <FileName>Voiles.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Services\Include\Voiles.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Services</GroupName>
+          <Files>
+            <File>
+              <FileName>Accelerometre.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Services\Source\Accelerometre.c</FilePath>
+            </File>
+            <File>
+              <FileName>Ecoute.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Services\Source\Ecoute.c</FilePath>
+            </File>
+            <File>
+              <FileName>Girouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Services\Source\Girouette.c</FilePath>
+            </File>
+            <File>
+              <FileName>Voiles.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Services\Source\Voiles.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>

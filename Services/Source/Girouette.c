@@ -1,4 +1,5 @@
 #include "Girouette.h"
+#include "MyTimer.h"
 
 void Girouette_Init()
 {
