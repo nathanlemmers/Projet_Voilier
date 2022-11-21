@@ -241,7 +241,7 @@ void MyTimer_PWM_ToGPIO(TIM_TypeDef * Timer , char Channel) {
 
 void MyTimer_ConfigureIncrementalEncoder(void)
 {
-	MyGPIO_Struct_TypeDef TI1, TI2 ;
+	MyGPIO_Struct_TypeDef TI1, TI2, Ind ;
 	MyTimer_Struct_TypeDef Timer4Config = { TIM4 , 360*4 - 1 , 0 } ;
 	
 	TI1.GPIO = GPIOB ;
@@ -253,7 +253,7 @@ void MyTimer_ConfigureIncrementalEncoder(void)
 	TI2.GPIO_Conf = In_Floating ;
 	TI2.GPIO_Pin = 7 ;
 	MyGPIO_Init (&TI2) ;
-	 
+	
 	MyTimer_Base_Init(&Timer4Config);
 	
 	
@@ -275,4 +275,14 @@ void MyTimer_ConfigureIncrementalEncoder(void)
 	TIM4->SMCR &= ~TIM_SMCR_SMS ;
 	TIM4->SMCR |= TIM_SMCR_SMS_0 | TIM_SMCR_SMS_1 ;
 	TIM4->CR1 |= TIM_CR1_CEN ;
+	
+	// Pour la remise a zero a l'index (non fonctionnel)
+	
+	Ind.GPIO = GPIOA ;
+	Ind.GPIO_Conf = In_Floating ;
+	Ind.GPIO_Pin = 0 ;
+	
+	MyGPIO_Init(&Ind) ;
+	
+	
 }

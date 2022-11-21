@@ -3,8 +3,8 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'LED' 
- * Target:  'Réel' 
+ * Project: 'Voiles' 
+ * Target:  'Simulé' 
  */
 
 #ifndef RTE_COMPONENTS_H
