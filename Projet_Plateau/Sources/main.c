@@ -3,20 +3,19 @@
 #include "MyGPIO.h"
 #include "MyTimer.h"
 #include "UART.h"
-#include "Voiles.h"
+#include "Plateau.h"
 
-void fonctionn(char caractere){
-		
-	}
+
 
 int main (void)
 {
+
+	Plateau_init();
+	UART_Config(USART3);
+
 	
-UART_Config(USART3);
-UART_confIT(&fonctionn);
-Voiles_Init() ;
-	
-	while (1) {
-		Voiles_Update() ;
+	while(1){
+	Plateau_set_vitesse(UART_getOctet());
+	Plateau_Tourner();
 	}
 }

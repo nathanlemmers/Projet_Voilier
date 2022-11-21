@@ -5,14 +5,14 @@
 signed char Octet;
 USART_TypeDef * UART;
 
-void (*handlerUART)(char);
+//void (*handlerUART)(char);
 
 void UART_Config(USART_TypeDef * UART){
 
 	MyGPIO_Struct_TypeDef gpioRX, gpioTX; 
 	
-	gpioRX.GPIO_Conf = AltOut_Ppull;
-	gpioTX.GPIO_Conf = In_Floating;
+	gpioRX.GPIO_Conf = In_Floating; 
+	gpioTX.GPIO_Conf = AltOut_Ppull;
 	
 	gpioRX.GPIO = GPIOC;
 	gpioRX.GPIO_Pin = 8 ;
@@ -42,37 +42,23 @@ void UART_Config(USART_TypeDef * UART){
 	
 	UART->CR1 |= USART_CR1_RXNEIE ;
 	// generate interuption USART_CR1 |= (1<<USART_CR1_RXNEIE);
-}
-
-void UART_send_char(char caractere){
-	while(USART_SR_TC==0);
-	UART->DR = caractere;
-}
-
-void UART_send_message(const char message[]){
-	int i = 0 ;
-	do {
-		UART_send_char(message[i]);
-		i++ ;
-		} while (message[i]!='\0') ;
-}
-
-
-void UART_confIT(void (* ptrFonction) (char)){
-	
-	handlerUART = ptrFonction ;
 	
 	NVIC_EnableIRQ(USART3_IRQn);
 	NVIC_SetPriority(USART3_IRQn, 10);
-	
-	
 }
+
+
+
 
 void USART3_IRQHandler(){
 
 		Octet=(USART3->DR) ;
 		USART3->SR &= ~USART_SR_RXNE; // rxne = 0
 
+}
+
+signed char UART_getOctet(void) {
+	return Octet;
 }
 
   

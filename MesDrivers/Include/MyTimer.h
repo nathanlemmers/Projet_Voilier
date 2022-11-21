@@ -43,8 +43,6 @@ void MyTimer_PWM_Cycle ( TIM_TypeDef * Timer , char Channel , float ratio )  ;
 void MyTimer_PWM_ToGPIO(TIM_TypeDef * Timer , char Channel) ;
 void MyTimer_ConfigureIncrementalEncoder(void) ;
 
-<<<<<<< HEAD
 #endif
-=======
-#endif
->>>>>>> 16455d61396467b51de14ba31d185f509a174813
+
+

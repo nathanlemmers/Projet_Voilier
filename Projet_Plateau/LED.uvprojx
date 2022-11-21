@@ -391,7 +391,7 @@
             <File>
               <FileName>Plateau.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\Plateau.c</FilePath>
+              <FilePath>.\Sources\Plateau.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -412,21 +412,6 @@
               <FileName>UART.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MesDrivers\Source\UART.c</FilePath>
-            </File>
-            <File>
-              <FileName>Girouette.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\Girouette.c</FilePath>
-            </File>
-            <File>
-              <FileName>Ecoute.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\Ecoute.c</FilePath>
-            </File>
-            <File>
-              <FileName>Voiles.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\Voiles.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -826,7 +811,7 @@
             <File>
               <FileName>Plateau.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\Plateau.c</FilePath>
+              <FilePath>.\Sources\Plateau.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -847,21 +832,6 @@
               <FileName>UART.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MesDrivers\Source\UART.c</FilePath>
-            </File>
-            <File>
-              <FileName>Girouette.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\Girouette.c</FilePath>
-            </File>
-            <File>
-              <FileName>Ecoute.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\Ecoute.c</FilePath>
-            </File>
-            <File>
-              <FileName>Voiles.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MesDrivers\Source\Voiles.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -922,4 +892,18 @@
         <targetInfos>
           <targetInfo name="Réel"/>
           <targetInfo name="Simulé"/>
-        </targ>
+        </targetInfos>
+      </file>
+    </files>
+  </RTE>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>LED</LayName>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
+
+</Project>
