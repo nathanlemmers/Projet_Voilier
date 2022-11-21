@@ -1,26 +1,21 @@
 
 #include "UART.h"
 
-// txe  rxne  rxneie
-signed char Octet;
+
+char Octet;
 USART_TypeDef * UART;
 
-//void (*handlerUART)(char);
 
 void UART_Config(USART_TypeDef * UART){
 
-	MyGPIO_Struct_TypeDef gpioRX, gpioTX; 
+	MyGPIO_Struct_TypeDef gpioRX ; 
 	
 	gpioRX.GPIO_Conf = In_Floating; 
-	gpioTX.GPIO_Conf = AltOut_Ppull;
 	
-	gpioRX.GPIO = GPIOC;
-	gpioRX.GPIO_Pin = 8 ;
-	gpioTX.GPIO = GPIOC;
-	gpioTX.GPIO_Pin = 9 ;
+	gpioRX.GPIO = GPIOB;
+	gpioRX.GPIO_Pin = 11 ;
 	
 	MyGPIO_Init(&gpioRX);
-	MyGPIO_Init(&gpioTX);
 	
 	RCC->APB1ENR |= RCC_APB1ENR_USART3EN; // enable clock
 	
@@ -57,7 +52,7 @@ void USART3_IRQHandler(){
 
 }
 
-signed char UART_getOctet(void) {
+char UART_getOctet(void) {
 	return Octet;
 }
 

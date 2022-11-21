@@ -41,7 +41,7 @@ void MyGPIO_Init ( MyGPIO_Struct_TypeDef * GPIOStructPtr ) {
 			GPIOStructPtr->GPIO->CRH |= In_PullDown << (4*(GPIOStructPtr->GPIO_Pin - 8)) ;
 			GPIOStructPtr->GPIO->ODR |= 1 << GPIOStructPtr->GPIO_Pin ;
 		} else {
-			GPIOStructPtr->GPIO->CRH &= ~((0xf) << (4*GPIOStructPtr->GPIO_Pin)) ;
+			GPIOStructPtr->GPIO->CRH &= ~((0xf) << (4*(GPIOStructPtr->GPIO_Pin - 8))) ;
 			GPIOStructPtr->GPIO->CRH |= GPIOStructPtr->GPIO_Conf << (4*(GPIOStructPtr->GPIO_Pin - 8)) ;
 		}
 	}

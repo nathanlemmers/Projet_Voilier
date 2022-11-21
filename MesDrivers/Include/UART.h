@@ -9,7 +9,7 @@
 void UART_Config(USART_TypeDef * UART);
 void UART_send_char(char caractere);
 void UART_send_message(const char message[]);
-signed char UART_getOctet(void);
+char UART_getOctet(void);
 void USART3_IRQHandler(void);
 
 #endif

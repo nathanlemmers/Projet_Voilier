@@ -4,7 +4,7 @@
 
 void Plateau_set_sens(int sens);
 
-void Plateau_set_vitesse(short speed);
+void Plateau_set_vitesse(char octet);
 
 void Plateau_init(void);
 
